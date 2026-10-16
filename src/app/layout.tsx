@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 import { LocalBusinessJsonLd } from "@/components/seo/JsonLd";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -77,6 +78,7 @@ export default function RootLayout({
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
       </body>
     </html>
   );

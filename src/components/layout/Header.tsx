@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { mainNav } from "@/config/nav";
 import { siteConfig } from "@/config/site";
+import Image from "next/image";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -15,9 +16,18 @@ export function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-heading text-xl font-bold text-brown"
-        >
+           className="flex items-center gap-2"
+>
+        <Image
+          src="/logo.png"
+          alt={siteConfig.name}
+          width={40}
+          height={40}
+          className="rounded-full"
+          />
+          <span className="font-heading text-xl font-bold text-brown">
           {siteConfig.name}
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

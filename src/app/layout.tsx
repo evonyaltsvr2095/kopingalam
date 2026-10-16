@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     default: `${siteConfig.name} — ${siteConfig.tagline}`,
     template: `%s | ${siteConfig.name}`,
   },
+  
   description: siteConfig.description,
   keywords: [
     "kafe Malang",
@@ -42,6 +43,7 @@ export const metadata: Metadata = {
     "kafe dengan live music Malang",
     "cafe view gunung Malang",
   ],
+
   authors: [{ name: siteConfig.name }],
   openGraph: {
     type: "website",
@@ -51,11 +53,13 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
   },
+
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
   },
+
   robots: {
     index: true,
     follow: true,
@@ -63,6 +67,11 @@ export const metadata: Metadata = {
 
    verification: {
     google: "D2u4FJLFPs4dimvewesbTmmoGoX-zHoSUlqfOfu1EoM",
+  },
+
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
   },
 };
 

@@ -4,6 +4,8 @@ export const mainNav = [
   { href: "/menu", label: "Menu" },
   { href: "/events", label: "Acara" },
   { href: "/visit", label: "Kunjungi" },
+  { href: "/library", label: "Pustaka" },
+  { href: "/gallery", label: "Galeri" },
 ] as const;
 
 export const footerNav = {

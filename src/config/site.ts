@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Kopingalam",
-  tagline: "Ngopi",
+  tagline: "Ngopi Nang Ngalam",
   description:
     "Kafe dengan view gunung di Malang, Jawa Timur. Nikmati kopi dan makanan lezat sambil menikmati pemandangan alam yang menakjubkan.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",

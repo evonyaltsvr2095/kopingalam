@@ -72,14 +72,15 @@ export default function VisitPage() {
             Gunakan peta di bawah untuk menemukan rute terbaik menuju Kopingalam.
           </p>
         </div>
-        <div className="aspect-video w-full bg-cream flex items-center justify-center text-sm text-soft-black/50">
-          {/* Nanti bisa diganti dengan iframe Google Maps jika alamat sudah fix */}
-          <p className="text-center px-6">
-            Peta interaktif akan ditampilkan di sini.
-            <br />
-            Sementara ini, gunakan tombol "Buka di Google Maps" di atas.
-          </p>
-        </div>
+            <iframe
+          src="https://www.openstreetmap.org/export/embed?bbox=112.73364451564323%2C-8.031203437704711%2C112.73478177226555%2C-8.030186225868293&layer=mapnik"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          loading="lazy"
+          className="aspect-video w-full"
+          title="Lokasi Kopingalam"
+        />
       </section>
 
       {/* FASILITAS */}

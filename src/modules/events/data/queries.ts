@@ -3,10 +3,13 @@ import type { EventItem } from "../types";
 
 export async function getPublishedEvents(): Promise<EventItem[]> {
   const supabase = await createSupabaseServerClient();
+  const now = new Date().toISOString();
+
   const { data, error } = await supabase
     .from("events")
     .select("*")
     .eq("status", "published")
+    .gte("starts_at", now) // <-- BARIS BARU: Filter event mendatang
     .order("starts_at", { ascending: true });
 
   if (error) throw error;

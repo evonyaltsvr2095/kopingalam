@@ -1,4 +1,6 @@
 import { Suspense } from "react";
+import Link from "next/link";
+import { Calendar } from "lucide-react";
 import { EventCard } from "@/modules/events/components/EventCard";
 import { getPublishedEvents } from "@/modules/events/data/queries";
 
@@ -19,8 +21,8 @@ export default function EventsPage() {
           Jadwal & Komunitas
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-soft-black/70">
-          Kopingalam bukan hanya tempat ngopi. Ada diskusi, musik, dan
-          kegiatan komunitas setiap minggu.
+          Kopingalam bukan hanya tempat ngopi. Ada diskusi, musik, dan kegiatan
+          komunitas setiap minggu.
         </p>
       </header>
 
@@ -36,9 +38,22 @@ async function EventsList() {
 
   if (publishedEvents.length === 0) {
     return (
-      <p className="text-center text-soft-black/60">
-        Belum ada acara yang dijadwalkan.
-      </p>
+      <div className="flex flex-col items-center justify-center rounded-2xl border border-light-grey bg-white py-16 text-center">
+        <Calendar size={48} className="text-moss/40 mb-4" />
+        <h3 className="font-heading text-xl font-semibold text-brown">
+          Belum ada acara mendatang
+        </h3>
+        <p className="mt-2 text-sm text-soft-black/60 max-w-md">
+          Nantikan acara-acara seru dari Kopingalam. Sementara itu, kamu bisa
+          menikmati menu kami.
+        </p>
+        <Link
+          href="/menu"
+          className="mt-6 rounded-full bg-terracotta px-5 py-2 text-sm font-semibold text-cream hover:opacity-90"
+        >
+          Lihat Menu
+        </Link>
+      </div>
     );
   }
 

@@ -103,16 +103,16 @@ export default async function HomePage() {
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             {featuredMenu.map((item) => (
-              <div key={item.id} className="rounded-2xl border border-light-grey bg-white p-6">
-                <h3 className="font-heading text-lg font-semibold text-brown">
-                  {item.name}
-                </h3>
-                <p className="mt-2 line-clamp-2 text-sm text-soft-black/70">
-                  {item.description}
-                </p>
-                <p className="mt-4 font-medium text-terracotta">
-                  Rp {item.priceIdr.toLocaleString("id-ID")}
-                </p>
+              <div key={item.id} className="rounded-2xl border border-light-grey bg-white p-6 dark:bg-[#b6895b] dark:border-[#b6895b]">
+                <h3 className="font-heading text-lg font-semibold text-brown dark:text-[#010101]">
+                   {item.name}
+               </h3>
+                <p className="mt-2 line-clamp-2 text-sm text-soft-black/70 dark:text-[#010101]/80">
+                   {item.description}
+               </p>
+                <p className="mt-4 font-medium text-terracotta dark:text-[#010101]">
+                   Rp {item.priceIdr.toLocaleString("id-ID")}
+               </p>
               </div>
             ))}
           </div>
@@ -199,13 +199,15 @@ function HighlightCard({
   return (
     <Link
       href={href}
-      className="group flex flex-col gap-3 rounded-2xl border border-light-grey bg-white p-6 transition hover:-translate-y-1 hover:border-terracotta hover:shadow-lg"
+      className="group flex flex-col gap-3 rounded-2xl border border-light-grey bg-white p-6 transition hover:-translate-y-1 hover:border-terracotta hover:shadow-lg dark:bg-[#b6895b] dark:border-[#b6895b]"
     >
       <div className="text-terracotta">{icon}</div>
-      <h3 className="font-heading text-lg font-semibold text-brown">
+      <h3 className="font-heading text-lg font-semibold text-brown group-hover:text-terracotta dark:text-[#010101]">
         {title}
       </h3>
-      <p className="text-sm text-soft-black/70">{description}</p>
+      <p className="text-sm text-soft-black/70 dark:text-[#010101]/80">
+        {description}
+      </p>
     </Link>
   );
 }

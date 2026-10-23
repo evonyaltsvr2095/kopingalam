@@ -104,7 +104,7 @@ export default async function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="mt-16 rounded-2xl border border-light-grey bg-cream p-8 text-center">
+      <section className="mt-16 rounded-2xl border border-light-grey bg-cream p-8 text-center dark:bg-[#111111] dark:border-gray-800">
         <Heart className="mx-auto text-terracotta mb-4" size={32} />
         <h2 className="font-heading text-2xl font-bold text-brown">
           Ingin berkunjung?
@@ -133,12 +133,14 @@ function ValueCard({
   description: string;
 }) {
   return (
-    <div className="rounded-2xl border border-light-grey bg-white p-6">
+    <div className="rounded-2xl border border-light-grey bg-white p-6 dark:bg-[#b6895b] dark:border-[#b6895b]">
       <div className="text-terracotta">{icon}</div>
-      <h3 className="mt-4 font-heading text-lg font-semibold text-brown">
+      <h3 className="mt-4 font-heading text-lg font-semibold text-brown dark:text-[#010101]">
         {title}
       </h3>
-      <p className="mt-2 text-sm text-soft-black/70">{description}</p>
+      <p className="mt-2 text-sm text-soft-black/70 dark:text-[#010101]/80">
+        {description}
+      </p>
     </div>
   );
 }

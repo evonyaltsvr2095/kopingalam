@@ -3,7 +3,7 @@ import type { GalleryPhoto } from "../types";
 
 export function PhotoCard({ photo }: { photo: GalleryPhoto }) {
   return (
-    <figure className="group overflow-hidden rounded-2xl border border-light-grey bg-white transition hover:border-terracotta hover:shadow-lg">
+    <figure className="group overflow-hidden rounded-2xl border border-light-grey bg-white transition hover:border-terracotta hover:shadow-lg dark:bg-[#b6895b] dark:border-[#b6895b]">
       <div className="relative aspect-square overflow-hidden">
         <Image
           src={`/gallery/${photo.filePath}`}
@@ -14,11 +14,11 @@ export function PhotoCard({ photo }: { photo: GalleryPhoto }) {
         />
       </div>
       <figcaption className="p-4">
-        <h3 className="font-heading text-base font-semibold text-brown">
+        <h3 className="font-heading text-base font-semibold text-brown dark:text-[#010101]">
           {photo.title}
         </h3>
         {photo.description && (
-          <p className="mt-1 text-xs text-soft-black/60 line-clamp-2">
+          <p className="mt-1 text-xs text-soft-black/60 line-clamp-2 dark:text-[#010101]/80">
             {photo.description}
           </p>
         )}

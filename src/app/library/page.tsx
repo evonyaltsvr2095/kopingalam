@@ -73,6 +73,9 @@ export default async function LibraryPage() {
           Kami terbuka untuk donasi buku. Hubungi kami lewat WhatsApp untuk
           informasi lebih lanjut.
         </p>
+       <a href="http://wa.me/6285961438827?text=Halo, saya ingin menyalurkan donasi buku." target="_blank" rel="noopener noreferrer" className="inline-block bg-green-400 text-white px-15 py-1 rounded hover:bg-green-600">
+          Chat WA
+        </a>
       </section>
     </main>
   );

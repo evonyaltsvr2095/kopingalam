@@ -3,6 +3,7 @@ import { Mail, MessageCircle } from "lucide-react";
 import { InstagramIcon } from "@/components/icons/SocialIcons";
 import { mainNav, footerNav } from "@/config/nav";
 import { siteConfig } from "@/config/site";
+import { NewsletterForm } from "@/modules/newsletter/components/NewsletterForm";
 
 export function Footer() {
   return (
@@ -17,6 +18,10 @@ export function Footer() {
             <p className="mt-3 max-w-sm text-sm text-cream/80">
               {siteConfig.description}
             </p>
+            <div className="mt-6 max-w-sm">
+              <h4 className="text-sm font-semibold text-cream mb-2">Dapatkan info acara terbaru</h4>
+              <NewsletterForm />
+            </div>
           </div>
 
           {/* Navigation */}

@@ -92,7 +92,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className={`${fraunces.variable} ${jakarta.variable}`}>
-      <body className="bg-cream text-soft-black antialiased flex min-h-screen flex-col">
+      <body className="bg-cream text-soft-black antialiased flex min-h-screen flex-col dark:bg-[#010101] dark:text-white">
         <LocalBusinessJsonLd />
         <Header />
         <div className="flex-1">{children}</div>

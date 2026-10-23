@@ -78,14 +78,14 @@ async function EventDetail({ params }: { params: Promise<Params> }) {
         </h1>
       </header>
 
-      <dl className="mt-8 grid gap-4 rounded-2xl border border-light-grey bg-white p-6 sm:grid-cols-2">
+      <dl className="mt-8 grid gap-4 rounded-2xl border border-light-grey bg-white p-6 sm:grid-cols-2 dark:bg-[#b6895b] dark:border-[#b6895b]">
         <div className="flex items-start gap-3">
           <Calendar size={18} className="mt-0.5 text-moss" />
           <div>
-            <dt className="text-xs uppercase tracking-wide text-soft-black/50">
+            <dt className="text-xs uppercase tracking-wide text-soft-black/50 dark:text-[#010101]">
               Tanggal
             </dt>
-            <dd className="text-sm font-medium text-soft-black">
+            <dd className="text-sm font-medium text-soft-black dark:text-[#010101]">
               {dateLabel}
             </dd>
           </div>
@@ -94,10 +94,10 @@ async function EventDetail({ params }: { params: Promise<Params> }) {
         <div className="flex items-start gap-3">
           <Clock size={18} className="mt-0.5 text-moss" />
           <div>
-            <dt className="text-xs uppercase tracking-wide text-soft-black/50">
+            <dt className="text-xs uppercase tracking-wide text-soft-black/50 dark:text-[#010101]">
               Waktu
             </dt>
-            <dd className="text-sm font-medium text-soft-black">
+            <dd className="text-sm font-medium text-soft-black dark:text-[#010101]">
               {startTime}
               {endTime && ` – ${endTime} WIB`}
             </dd>
@@ -107,10 +107,10 @@ async function EventDetail({ params }: { params: Promise<Params> }) {
         <div className="flex items-start gap-3">
           <MapPin size={18} className="mt-0.5 text-moss" />
           <div>
-            <dt className="text-xs uppercase tracking-wide text-soft-black/50">
+            <dt className="text-xs uppercase tracking-wide text-soft-black/50 dark:text-[#010101]">
               Lokasi
             </dt>
-            <dd className="text-sm font-medium text-soft-black">
+            <dd className="text-sm font-medium text-soft-black dark:text-[#010101]">
               {event.locationText}
             </dd>
           </div>
@@ -119,10 +119,10 @@ async function EventDetail({ params }: { params: Promise<Params> }) {
         <div className="flex items-start gap-3">
           <Users size={18} className="mt-0.5 text-moss" />
           <div>
-            <dt className="text-xs uppercase tracking-wide text-soft-black/50">
+            <dt className="text-xs uppercase tracking-wide text-soft-black/50 dark:text-[#010101]">
               Kapasitas
             </dt>
-            <dd className="text-sm font-medium text-soft-black">
+            <dd className="text-sm font-medium text-soft-black dark:text-[#010101]">
               {event.capacity} orang
             </dd>
           </div>

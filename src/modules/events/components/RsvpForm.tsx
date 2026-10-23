@@ -70,12 +70,8 @@ export function RsvpForm({
   }
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className="rounded-2xl border border-light-grey bg-white p-6 md:p-8"
-      noValidate
-    >
-      <h2 className="font-heading text-xl font-semibold text-brown">
+    <form onSubmit={handleSubmit(onSubmit)} className="rounded-2xl border border-light-grey bg-white p-6 md:p-8 dark:bg-[#b6895b] dark:border-[#b6895b]" noValidate>
+      <h2 className="font-heading text-xl font-semibold text-brown dark:text-[#010101]">
         Daftar Hadir
       </h2>
       <p className="mt-2 text-sm text-soft-black/70">
@@ -87,7 +83,7 @@ export function RsvpForm({
         <div>
           <label
             htmlFor="rsvp-name"
-            className="block text-sm font-medium text-soft-black"
+            className="block text-sm font-medium text-soft-black dark:text-[#010101]"
           >
             Nama Lengkap <span className="text-red-500">*</span>
           </label>
@@ -97,8 +93,7 @@ export function RsvpForm({
             autoComplete="name"
             {...register("name")}
             aria-invalid={errors.name ? "true" : "false"}
-            className="mt-2 w-full rounded-lg border border-light-grey bg-cream px-4 py-2.5 text-sm text-soft-black outline-none transition focus:border-terracotta focus:ring-2 focus:ring-terracotta/20"
-            placeholder="Contoh: Budi Santoso"
+            className="mt-2 w-full rounded-lg border border-light-grey bg-cream px-4 py-2.5 text-sm text-soft-black outline-none transition focus:border-terracotta focus:ring-2 focus:ring-terracotta/20 dark:bg-[#010101] dark:text-white dark:border-gray-700"
           />
           {errors.name && (
             <p className="mt-1.5 flex items-center gap-1 text-xs text-red-600">
@@ -112,7 +107,7 @@ export function RsvpForm({
         <div>
           <label
             htmlFor="rsvp-contact"
-            className="block text-sm font-medium text-soft-black"
+            className="block text-sm font-medium text-soft-black dark:text-[#010101]"
           >
             WhatsApp atau Email <span className="text-red-500">*</span>
           </label>
@@ -122,7 +117,7 @@ export function RsvpForm({
             autoComplete="tel"
             {...register("contact")}
             aria-invalid={errors.contact ? "true" : "false"}
-            className="mt-2 w-full rounded-lg border border-light-grey bg-cream px-4 py-2.5 text-sm text-soft-black outline-none transition focus:border-terracotta focus:ring-2 focus:ring-terracotta/20"
+            className="mt-2 w-full rounded-lg border border-light-grey bg-cream px-4 py-2.5 text-sm text-soft-black outline-none transition focus:border-terracotta focus:ring-2 focus:ring-terracotta/20 dark:bg-[#010101] dark:text-white dark:border-gray-700"
             placeholder="08xxxxxxxxxx atau nama@email.com"
           />
           {errors.contact && (
@@ -137,7 +132,7 @@ export function RsvpForm({
         <div>
           <label
             htmlFor="rsvp-guests"
-            className="block text-sm font-medium text-soft-black"
+            className="block text-sm font-medium text-soft-black dark:text-[#010101]"
           >
             Jumlah Tamu <span className="text-red-500">*</span>
           </label>
@@ -148,7 +143,7 @@ export function RsvpForm({
             max={10}
             {...register("guestCount", { valueAsNumber: true })}
             aria-invalid={errors.guestCount ? "true" : "false"}
-            className="mt-2 w-full rounded-lg border border-light-grey bg-cream px-4 py-2.5 text-sm text-soft-black outline-none transition focus:border-terracotta focus:ring-2 focus:ring-terracotta/20"
+            className="mt-2 w-full rounded-lg border border-light-grey bg-cream px-4 py-2.5 text-sm text-soft-black outline-none transition focus:border-terracotta focus:ring-2 focus:ring-terracotta/20 dark:bg-[#010101] dark:text-white dark:border-gray-700"
           />
           {errors.guestCount && (
             <p className="mt-1.5 flex items-center gap-1 text-xs text-red-600">
@@ -162,15 +157,15 @@ export function RsvpForm({
         <div>
           <label
             htmlFor="rsvp-notes"
-            className="block text-sm font-medium text-soft-black"
+            className="block text-sm font-medium text-soft-black dark:text-[#010101]"
           >
-            Catatan <span className="text-soft-black/50">(opsional)</span>
+            Catatan <span className="text-soft-black/50 dark:text-[#010101]/50">(opsional)</span>
           </label>
           <textarea
             id="rsvp-notes"
             rows={3}
             {...register("notes")}
-            className="mt-2 w-full resize-none rounded-lg border border-light-grey bg-cream px-4 py-2.5 text-sm text-soft-black outline-none transition focus:border-terracotta focus:ring-2 focus:ring-terracotta/20"
+            className="mt-2 w-full resize-none rounded-lg border border-light-grey bg-cream px-4 py-2.5 text-sm text-soft-black outline-none transition focus:border-terracotta focus:ring-2 focus:ring-terracotta/20 dark:bg-[#010101] dark:text-white dark:border-gray-700"
             placeholder="Contoh: bawa buku untuk didiskusikan"
           />
           {errors.notes && (
@@ -189,10 +184,10 @@ export function RsvpForm({
         </div>
       )}
 
-      <button
+     <button
         type="submit"
         disabled={status === "loading"}
-        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-cream transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
+        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-cream transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70 dark:bg-[#010101] dark:text-[#b6895b] dark:hover:bg-gray-900"
       >
         {status === "loading" ? (
           <>

@@ -27,30 +27,5 @@ export const sampleEvents: EventItem[] = [
     priceLabel: "Gratis (min. 1 minuman)",
     status: "published",
   },
-  {
-    id: "evt-003",
-    slug: "workshop-fotografi-alam",
-    title: "Workshop Fotografi Alam",
-    description:
-      "Belajar teknik dasar fotografi lanskap langsung di lokasi dengan pemandangan pegunungan. Bawa kamera atau smartphone kamu.",
-    startsAt: "2026-11-02T06:00:00+07:00",
-    endsAt: "2026-11-02T09:00:00+07:00",
-    locationText: "Titik pandang Kopingalam, Malang",
-    capacity: 20,
-    priceLabel: "Rp 75.000",
-    status: "published",
-  },
-  {
-    id: "evt-004",
-    slug: "sinau-bareng-november",
-    title: "SINAU BARENG: Menulis & Ide",
-    description:
-      "Sesi berbagi tentang menulis kreatif dan cara menemukan ide dari keseharian. Dipandu oleh moderator dari tim Kopingalam.",
-    startsAt: "2026-11-07T19:00:00+07:00",
-    endsAt: "2026-11-07T21:00:00+07:00",
-    locationText: "Kopingalam, Malang",
-    capacity: 50,
-    priceLabel: "Gratis",
-    status: "published",
-  },
+  
 ];

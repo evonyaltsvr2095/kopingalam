@@ -62,9 +62,9 @@ export default function VisitPage() {
         />
       </div>
 
-      {/* PETA (Embed Google Maps Placeholder) */}
-      <section className="mt-12 overflow-hidden rounded-2xl border border-light-grey bg-white">
-        <div className="border-b border-light-grey p-6">
+      {/* PETA */}
+      <section className="mt-12 overflow-hidden rounded-2xl border border-light-grey dark:border-[#b6895b]">
+        <div className="border-b border-light-grey p-6 dark:border-[#b6895b]">
           <h2 className="font-heading text-xl font-semibold text-brown">
             Peta Lokasi
           </h2>
@@ -72,7 +72,7 @@ export default function VisitPage() {
             Gunakan peta di bawah untuk menemukan rute terbaik menuju Kopingalam.
           </p>
         </div>
-            <iframe
+        <iframe
           src="https://www.openstreetmap.org/export/embed?bbox=112.73364451564323%2C-8.031203437704711%2C112.73478177226555%2C-8.030186225868293&layer=mapnik"
           width="100%"
           height="100%"
@@ -102,9 +102,9 @@ export default function VisitPage() {
           ].map((item) => (
             <li
               key={item.label}
-              className="flex items-center gap-3 rounded-xl border border-light-grey bg-white p-4 text-sm font-medium text-soft-black/80"
+              className="flex items-center gap-3 rounded-xl border border-light-grey bg-white p-4 text-sm font-medium text-soft-black/80 dark:bg-[#b6895b] dark:border-[#b6895b] dark:text-[#010101]"
             >
-              <span className="text-terracotta">{item.icon}</span>
+              <span className="text-terracotta dark:text-[#010101]">{item.icon}</span>
               {item.label}
             </li>
           ))}
@@ -113,9 +113,7 @@ export default function VisitPage() {
 
       {/* CTA WHATSAPP */}
       <section className="mt-12 rounded-2xl bg-brown p-8 text-center text-cream">
-        <h2 className="font-heading text-2xl font-bold">
-          Ada pertanyaan?
-        </h2>
+        <h2 className="font-heading text-2xl font-bold">Ada pertanyaan?</h2>
         <p className="mt-2 text-cream/80">
           Tim kami siap membantu. Hubungi kami lewat WhatsApp.
         </p>
@@ -144,14 +142,14 @@ function InfoCard({
   action?: { label: string; href: string };
 }) {
   return (
-    <div className="rounded-2xl border border-light-grey bg-white p-6">
+    <div className="rounded-2xl border border-light-grey bg-white p-6 dark:bg-[#b6895b] dark:border-[#b6895b]">
       <div className="flex items-center gap-3 text-terracotta">
         {icon}
-        <h2 className="font-heading text-lg font-semibold text-brown">
+        <h2 className="font-heading text-lg font-semibold text-brown dark:text-[#010101]">
           {title}
         </h2>
       </div>
-      <div className="mt-4 space-y-1 text-sm text-soft-black/70">
+      <div className="mt-4 space-y-1 text-sm text-soft-black/70 dark:text-[#010101]/80">
         {lines.map((line) => (
           <p key={line}>{line}</p>
         ))}

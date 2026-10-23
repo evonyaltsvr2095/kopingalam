@@ -1,7 +1,10 @@
+import { connection } from "next/server";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import type { EventItem } from "../types";
 
 export async function getPublishedEvents(): Promise<EventItem[]> {
+  await connection();
+  
   const supabase = await createSupabaseServerClient();
   const now = new Date().toISOString();
 
